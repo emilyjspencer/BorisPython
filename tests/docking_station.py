@@ -8,8 +8,13 @@ class DockingStation:
         self.bikes = []
 
     def releaseBike(self):
-        return "Bike"
+        if len(self.bikes) <= 0:
+           raise Exception("Unable to release bike. None available")
+        else:
+            return self.bikes.pop()
 
     def dock(self, bike):
         self.bikes.append(bike)
         return self.bikes
+
+   
