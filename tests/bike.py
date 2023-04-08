@@ -1,5 +1,9 @@
 class Bike:
 
+    def __init__(self, name):
+        self.broken = False
+        self.name = name
 
     def isWorking(self):
-       return True
+       self.broken = False
+       return self.broken

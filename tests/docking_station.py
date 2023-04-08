@@ -7,6 +7,9 @@ class DockingStation:
         self.bikes = []
         self.maxCapacity = 3
 
+    def setMaxCapacity(self, value):
+        self._maxCapacity = value
+
     def releaseBike(self):
         if len(self.bikes) <= 0:
            raise Exception("Unable to release bike. None available")
