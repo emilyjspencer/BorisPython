@@ -4,6 +4,6 @@ class Bike:
         self.broken = False
         self.name = name
 
-    def isWorking(self):
-       self.broken = False
+    def reportAsBroken(self):
+       self.broken = True
        return self.broken
