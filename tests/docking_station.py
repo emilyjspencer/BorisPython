@@ -11,7 +11,7 @@ class DockingStation:
         self._maxCapacity = value
 
     def releaseBike(self):
-        if not self.empty():
+        if not self.__empty():
             if len(self.bikes)== 0:
                 return bikes.pop()
             else:
@@ -20,19 +20,19 @@ class DockingStation:
             
 
     def dock(self, bike, broken = False):
-        if self.full():
+        if self.__full():
             raise Exception("Unable to dock bike. At maximum capacity")
         elif broken == True: 
             self.bikes.append(bike)
             return self.bikes
 
-    def full(self):
+    def __full(self):
         if len(self.bikes) >= 3:
             return True
         else:
             return False
 
-    def empty(self):
+    def __empty(self):
         if len(self.bikes) == 0:
             return True
         else:
